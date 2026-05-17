@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>柴田 理緒 - UX Director Portfolio</title>
+  <meta name="description" content="UXリサーチによってインサイトを抽出し、プロダクト改善に活かすUXデザイナー 柴田理緒のポートフォリオ。">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tabler Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="snav">
+  <div class="snav-inner">
+    <a class="snav-logo" id="snav-logo" onclick="showPage('home'); window.scrollTo({top:0, behavior:'smooth'});" style="cursor:pointer; display:none;">RIO SHIBATA</a>
+    <div class="snav-links">
+      <a onclick="showPage('home');setTimeout(()=>document.getElementById('sa').scrollIntoView({behavior:'smooth'}),200)">experience</a>
+      <a onclick="showPage('home');setTimeout(()=>document.getElementById('sp').scrollIntoView({behavior:'smooth'}),200)">projects</a>
+      <a onclick="showPage('home');setTimeout(()=>document.getElementById('sr').scrollIntoView({behavior:'smooth'}),200)">research</a>
+      <a onclick="showPage('home');setTimeout(()=>document.getElementById('ss').scrollIntoView({behavior:'smooth'}),200)">skills</a>
+      <a onclick="showPage('home');setTimeout(()=>document.getElementById('sc').scrollIntoView({behavior:'smooth'}),200)">contact</a>
+    </div>
+  </div>
+</div>
+
+<div id="pg-home" class="page active">
+  <div class="hero-wrap">
+    <div class="hero-2col">
+      <div class="hero-left">
+        <div class="hero-name-row">
+          <span class="hero-name-en">Rio Shibata</span>
+          <span class="hero-name-sep"></span>
+          <span class="hero-name-ja">柴田 理緒</span>
+        </div>
+        <p class="hero-role-title">UX Director</p>
+        <p class="hero-role-title">&amp; Researcher</p>
+        <p class="hero-desc" style="margin-top:1.25rem;">UXリサーチによってインサイトを抽出し、プロダクト改善に活かすUXデザイナー。楽天市場での検索UX改善担当・FAQ全面リニューアルをはじめ、大手ECから金融・不動産まで幅広いドメインでのリサーチ・設計を経験。</p>
+        <div class="hero-chips" style="margin-top:1rem;">
+          <span class="hero-chip">UXリサーチ</span>
+          <span class="hero-chip">情報設計</span>
+          <span class="hero-chip">プロトタイプ作成</span>
+          <span class="hero-chip">データ分析（SQL・Analytics）</span>
+          <span class="hero-chip">Figma</span>
+        </div>
+      </div>
+      <div class="hero-ai">
+        <div class="hero-ai-card">
+          <div class="hero-ai-card-top">
+            <i class="ti ti-sparkles hero-ai-card-icon"></i>
+            <p class="hero-ai-card-title">Rio AI Assistant</p>
+          </div>
+          <p class="hero-ai-card-desc">経歴・リサーチ手法・得意領域など、AIが代わりにお答えします。</p>
+          <div class="hero-ai-chips">
+            <button class="hero-ai-chip" onclick="openChatWith('どんなリサーチ手法を使っていますか？')">リサーチ手法</button>
+            <button class="hero-ai-chip" onclick="openChatWith('楽天での具体的な成果を教えてください')">楽天での成果</button>
+            <button class="hero-ai-chip" onclick="openChatWith('UXリサーチャーとしての強みは？')">強み</button>
+          </div>
+          <button class="hero-ai-cta" onclick="toggleChat()">
+            Ask AI about Rio <i class="ti ti-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hsec" id="sa">
+    <p class="hsec-title">EXPERIENCE</p>
+    <div class="tlwrap">
+      <div class="tli">
+        <p class="tlp">2023–現在</p>
+        <div class="tlcontent">
+          <p class="tlco">楽天グループ株式会社</p>
+          <p class="tlro">UXディレクター · 市場編成UXグループ</p>
+        </div>
+      </div>
+      <div class="tli">
+        <p class="tlp">2020–2023</p>
+        <div class="tlcontent">
+          <p class="tlco">株式会社ニジボックス</p>
+          <p class="tlro">UXリサーチャー · クライアントソリューション部</p>
+        </div>
+      </div>
+      <div class="tli">
+        <p class="tlp">2017–2019</p>
+        <div class="tlcontent">
+          <p class="tlco">株式会社シイエヌエス</p>
+          <p class="tlro">データアナリスト · ビッグデータ戦略事業部</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-alternate">
+    <div class="hsec" id="sp">
+      <p class="hsec-title">PROJECTS</p>
+
+      <p class="pgroup-label">楽天グループ株式会社</p>
+      <div class="pgrid">
+        <div class="pcard" onclick="showCase('c1')">
+          <div class="pthumb"><img src="images/c1_mockup.png" alt="App Mockup"></div>
+          <p class="pco">2024</p>
+          <p class="ptitle">楽天市場：ポイントを加味した価格比較機能のUI改善</p>
+          <p class="pdesc">認知的ウォークスルー×定量分析でUIUX課題を特定し、ボトムアップ起案。3年間で1億円規模のRevenueリフトを試算。</p>
+          <div class="pchips"><span class="chip">専門家評価</span><span class="chip">定量分析</span><span class="chip">起案〜納品</span></div>
+        </div>
+        <div class="pcard" onclick="showCase('c2')">
+          <div class="pthumb"><img src="images/c2_mockup.png" alt="App Mockup"></div>
+          <p class="pco">2025–2026</p>
+          <p class="ptitle">楽天市場：AI商品選択ガイド機能の受容性検証</p>
+          <p class="pdesc">新機能提案から60名の会場調査・ABテストを主導。失敗を次の設計方針に転換できるインサイトを獲得。</p>
+          <div class="pchips"><span class="chip">AI機能提案</span><span class="chip">会場調査60名</span><span class="chip">ABテスト</span></div>
+        </div>
+        <div class="pcard" onclick="showCase('c3')">
+          <div class="pthumb"><img src="images/c3_mockup2.jpg" alt="FAQ Mockup"></div>
+          <p class="pco">2023–2024</p>
+          <p class="ptitle">楽天市場：カスタマーサポートFAQの全面リニューアル</p>
+          <p class="pdesc">サイト構造設計から全画面ディレクションまで主担当。リニューアル後2週間で回答率+1pt。</p>
+          <div class="pchips"><span class="chip">情報設計</span><span class="chip">SP/PC全画面</span><span class="chip">回答率+1pt</span></div>
+        </div>
+      </div>
+
+      <p class="pgroup-label pgroup-label--second">株式会社ニジボックス</p>
+      <div class="pgrid">
+        <div class="pcard-compact" onclick="showCase('n1')">
+          <div class="pcard-icon"><i class="ti ti-search" aria-hidden="true"></i></div>
+          <p class="pco">2021–2022</p>
+          <p class="ptitle">新規事業：中古マンションリノベーションUXリサーチ</p>
+          <p class="pdesc">新規事業のターゲットユーザー像を特定</p>
+          <div class="pchips"><span class="chip">インタビュー</span><span class="chip">ペルソナ</span><span class="chip">CJM</span></div>
+        </div>
+        <div class="pcard-compact" onclick="showCase('n2')">
+          <div class="pcard-icon"><i class="ti ti-device-mobile" aria-hidden="true"></i></div>
+          <p class="pco">2020–2022</p>
+          <p class="ptitle">銀行アプリ：リリース前ユーザビリティテスト</p>
+          <p class="pdesc">半年ごと3回・計30名以上のテストを実施。継続的な改善を主導し、社内の準MVPを受賞。</p>
+          <div class="pchips"><span class="chip">ユーザビリティテスト</span><span class="chip">準MVP受賞</span></div>
+        </div>
+        <div class="pcard-compact" onclick="showCase('n3')">
+          <div class="pcard-icon"><i class="ti ti-briefcase" aria-hidden="true"></i></div>
+          <p class="pco">2022–2023</p>
+          <p class="ptitle">グローバルUXチームでの常駐型支援</p>
+          <p class="pdesc">UXデザイナーとして1年以上常駐。全てのNPS調査で満点評価を継続。</p>
+          <div class="pchips"><span class="chip">常駐UX</span><span class="chip">NPS満点</span><span class="chip">複数PJ並行</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="initiatives-section">
+    <div class="initiatives-section-inner">
+      <div class="initiatives-block">
+        <div class="initiatives-header">
+          <p class="initiatives-eyebrow">楽天グループ · 2023–現在</p>
+          <p class="initiatives-heading">チーム・組織への貢献</p>
+          <p class="initiatives-intro">プロジェクト成果に加え、組織のリサーチケイパビリティ向上と、チームを超えた基盤づくりにも取り組んでいます。</p>
+        </div>
+        <div class="initiatives-grid">
+          <div class="initiative-item">
+            <div class="initiative-icon"><i class="ti ti-school" aria-hidden="true"></i></div>
+            <p class="initiative-title">Research Evangelist</p>
+            <p class="initiative-desc">20名規模のUXチームのリサーチ教育・品質管理を担当。レビュー・テンプレート整備・OJTを通じてリサーチプロセスを組織全体に標準化。</p>
+            <div class="initiative-chips">
+              <span class="initiative-chip">教育設計</span>
+              <span class="initiative-chip">品質管理</span>
+              <span class="initiative-chip">20名規模</span>
+            </div>
+          </div>
+          <div class="initiative-item">
+            <div class="initiative-icon"><i class="ti ti-writing" aria-hidden="true"></i></div>
+            <p class="initiative-title">UXライティングガイドライン策定</p>
+            <p class="initiative-desc">属人化していたテキスト判断基準を体系化し、2026年1月に策定。楽天市場全体で一貫したユーザーコミュニケーション基盤を構築。</p>
+            <div class="initiative-chips">
+              <span class="initiative-chip">組織横断</span>
+              <span class="initiative-chip">仕組み化</span>
+              <span class="initiative-chip">2026年1月</span>
+            </div>
+          </div>
+          <div class="initiative-item">
+            <div class="initiative-icon"><i class="ti ti-map-2" aria-hidden="true"></i></div>
+            <p class="initiative-title">KPI体系の再設計とロードマップ策定</p>
+            <p class="initiative-desc">検索画面KPIの分解・整理・モニタリング設計を主導。定量的な改善の優先順位付けができる体系と、プロダクト改善ロードマップを策定。</p>
+            <div class="initiative-chips">
+              <span class="initiative-chip">KPI設計</span>
+              <span class="initiative-chip">ロードマップ</span>
+              <span class="initiative-chip">戦略策定</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hsec" id="sr">
+    <p class="hsec-title">RESEARCH OUTPUTS</p>
+
+    <div class="rlist">
+
+      <div class="ritem" onclick="showCase('r1')">
+        <span class="rnum">01</span>
+        <div class="ritem-body">
+          <p class="ritem-title">最も使いやすい検索Filter UIは？</p>
+          <div class="ritem-meta">
+            <span class="rmeta">CLT会場調査 · 60名</span>
+            <span class="rmeta">ASQ / SUS</span>
+            <span class="rmeta">インタビュー</span>
+            <span class="rmeta">カードソーティング</span>
+          </div>
+        </div>
+        <i class="ti ti-arrow-right ritem-arrow" aria-hidden="true"></i>
+      </div>
+
+      <div class="ritem" onclick="showCase('r2')">
+        <span class="rnum">02</span>
+        <div class="ritem-body">
+          <p class="ritem-title">「同じ商品が並ぶ」ペインの構造化と解決策の検証</p>
+          <div class="ritem-meta">
+            <span class="rmeta">定性インタビュー</span>
+            <span class="rmeta">UT</span>
+            <span class="rmeta">Figmaプロト</span>
+            <span class="rmeta">ペルソナ設計</span>
+            <span class="rmeta">ペイン分類</span>
+          </div>
+        </div>
+        <i class="ti ti-arrow-right ritem-arrow" aria-hidden="true"></i>
+      </div>
+
+      <div class="ritem" onclick="showCase('r3')">
+        <span class="rnum">03</span>
+        <div class="ritem-body">
+          <p class="ritem-title">検索AIガイド機能：CLT調査から導く「使われない理由」と改善方針</p>
+          <div class="ritem-meta">
+            <span class="rmeta">CLT調査</span>
+            <span class="rmeta">UI評価</span>
+
+          </div>
+        </div>
+        <i class="ti ti-arrow-right ritem-arrow" aria-hidden="true"></i>
+      </div>
+
+
+
+    </div>
+  </div>
+
+  <div class="sec-alternate">
+    <div class="hsec" id="ss">
+    <p class="hsec-title">SKILLS</p>
+    <div class="sgrid">
+      <div class="sblock">
+        <div class="sicon"><i class="ti ti-microscope" aria-hidden="true"></i></div>
+        <p class="sname">リサーチ設計・実査</p>
+        <p class="slist">インタビュー / デプスインタビュー<br>ユーザビリティテスト（CLT・リモート）<br>アンケート設計・分析<br>認知的ウォークスルー<br>カードソーティング<br>ペルソナ / CJM 作成<br>インサイト抽出・言語化<br>リサーチレビュー・指導</p>
+      </div>
+      <div class="sblock">
+        <div class="sicon"><i class="ti ti-layout" aria-hidden="true"></i></div>
+        <p class="sname">UXデザイン・情報設計</p>
+        <p class="slist">情報アーキテクチャ（IA設計）<br>ワイヤーフレーム<br>Figma / プロトタイプ作成<br>UXライティング<br>デザインディレクション</p>
+      </div>
+      <div class="sblock">
+        <div class="sicon"><i class="ti ti-chart-dots" aria-hidden="true"></i></div>
+        <p class="sname">データ分析・プロダクト推進</p>
+        <p class="slist">SQL（BigQuery, Redshift）<br>Adobe Analytics / Tableau<br>KPI設計・ABテスト設計<br>ボトムアップ起案<br>仕様書作成・要件定義<br>エンジニア / PDM 協業</p>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="hsec" id="sc">
+    <p class="hsec-title">CONTACT</p>
+    <p style="font-size:15px;color:var(--color-text-secondary);line-height:1.7;margin-bottom:1.5rem;">お仕事の依頼・転職に関するご連絡はこちらから。</p>
+    <div style="display:flex;flex-direction:column;gap:0.5rem;">
+      <a href="mailto:rio.shibata0120@gmail.com" style="font-size:15px;color:var(--color-text-primary);text-decoration:none;">rio.shibata0120@gmail.com</a>
+    </div>
+  </div>
+</div>
+
+<div id="pg-case" class="page">
+  <div id="case-content"></div>
+</div>
+
+<div id="pg-research" class="page">
+  <div style="padding:2.5rem 2rem 0; max-width:800px; margin:0 auto;">
+    <p style="font-size:12px;font-weight:600;letter-spacing:0.1em;color:var(--color-text-secondary);margin-bottom:1rem;">RESEARCH OUTPUTS</p>
+    <p style="font-size:15px;color:var(--color-text-secondary);line-height:1.8;margin-bottom:2.5rem;">スライド形式のリサーチアウトプットサンプルです。実際の調査で作成したレポートの構成・内容を再現しています。</p>
+  </div>
+  <div id="research-content" style="max-width:800px; margin:0 auto;">
+    <div style="padding:0 2rem 3rem;text-align:center;color:var(--color-text-secondary);font-size:14px;">リサーチスライドを読み込み中...</div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <p class="footer-name">柴田 理緒</p>
+      <p class="footer-role">UX Director / Researcher</p>
+    </div>
+    <div class="footer-right">
+      <div class="footer-links">
+        <a onclick="showPage('home');setTimeout(()=>window.scrollTo({top:0,behavior:'smooth'}),200)">Top</a>
+        <a onclick="showPage('home');setTimeout(()=>document.getElementById('sa').scrollIntoView({behavior:'smooth'}),200)">Experience</a>
+        <a onclick="showPage('home');setTimeout(()=>document.getElementById('sp').scrollIntoView({behavior:'smooth'}),200)">Projects</a>
+        <a onclick="showPage('home');setTimeout(()=>document.getElementById('sc').scrollIntoView({behavior:'smooth'}),200)">Contact</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Rio Shibata. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- AI Assistant Chatbot -->
+<div class="chat-widget" id="chatWidget">
+  <div class="chat-header">
+    <div class="chat-header-info">
+      <div class="chat-avatar"><i class="ti ti-robot"></i></div>
+      <div>
+        <h3 class="chat-title">Rio Assistant</h3>
+        <p class="chat-status">Powered by Gemini</p>
+      </div>
+    </div>
+    <button class="chat-close" onclick="toggleChat()"><i class="ti ti-x"></i></button>
+  </div>
+  <div class="chat-body" id="chatBody">
+    <div class="chat-msg ai-msg">
+      <div class="msg-bubble" style="margin-bottom:0.5rem;">こんにちは！UXデザイナー柴田理緒のAIアシスタントです。ポートフォリオの内容について何でもご質問ください。</div>
+      <div class="chat-tips">
+        <button class="chat-tip" onclick="fillChatInput('リサーチの品質管理や教育（OJT）の経験は？')">リサーチの品質管理や教育（OJT）の経験は？</button>
+        <button class="chat-tip" onclick="fillChatInput('定性・定量の両面からのアプローチ事例は？')">定性・定量の両面からのアプローチ事例は？</button>
+        <button class="chat-tip" onclick="fillChatInput('得意なUXリサーチ手法とその理由は？')">得意なUXリサーチ手法とその理由は？</button>
+      </div>
+    </div>
+  </div>
+  <div class="chat-footer">
+    <input type="text" id="chatInput" placeholder="質問を入力してください..." onkeypress="handleChatKeyPress(event)">
+    <button class="chat-send" onclick="sendChatMessage()"><i class="ti ti-send"></i></button>
+  </div>
+</div>
+
+<button class="chat-fab" id="chatFab" onclick="toggleChat()">
+  <i class="ti ti-sparkles"></i> Ask AI
+</button>
+
+<!-- Custom JS -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
